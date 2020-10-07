@@ -8,4 +8,8 @@ data class Produto(val nome: String,
                    val valor: Float,
                    @PrimaryKey(autoGenerate = true)
                    val id: Int = 0) {
+
+    override fun toString(): String {
+        return id.toString() + " - " + nome + " (R$ " + valor.toString() + ")"
+    }
 }
